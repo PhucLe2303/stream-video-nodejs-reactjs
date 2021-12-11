@@ -1,0 +1,17 @@
+{
+  "name": "server-stream-video",
+  "version": "1.0.0",
+  "description": "server to demo stream video",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "https://github.com/PhucLe2303",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15"
+  }
+}
