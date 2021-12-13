@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import VideoThumbnail from "react-video-thumbnail";
 
 export default function Home(props) {
   const [videos, setVideos] = useState([]);
@@ -25,14 +26,10 @@ export default function Home(props) {
             <div className="col-md-4" key={video.id}>
               <Link to={`/player/${video.id}`}>
                 <div className="card border-0">
-                  <img
-                    src={`http://localhost:2022${video.poster}`}
-                    alt={video.name}
+                  <VideoThumbnail
+                    videoUrl={`http://localhost:2022/video/${video.id}`}
+                    thumbnailHandler={(thumbnail) => console.log(thumbnail)}
                   />
-                  <div className="card-body">
-                    <p>{video.name}</p>
-                    <p>{video.duration}</p>
-                  </div>
                 </div>
               </Link>
             </div>
